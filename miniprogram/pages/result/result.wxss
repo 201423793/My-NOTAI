@@ -1,0 +1,139 @@
+.result-page {
+  padding: 24rpx;
+  padding-bottom: 120rpx;
+}
+
+.comparison-card {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+  margin-bottom: 24rpx;
+}
+
+.comparison-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 32rpx;
+  border-bottom: 1rpx solid var(--border-color);
+}
+
+.comparison-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.comparison-container {
+  position: relative;
+  width: 100%;
+  height: 600rpx;
+  overflow: hidden;
+}
+
+.comparison-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.comparison-overlay {
+  z-index: 1;
+}
+
+.slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4rpx;
+  background: #FFFFFF;
+  z-index: 2;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.3);
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64rpx;
+  height: 64rpx;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.2);
+}
+
+.slider-icon {
+  font-size: 20rpx;
+  color: var(--text-secondary);
+}
+
+.label {
+  position: absolute;
+  bottom: 16rpx;
+  padding: 8rpx 20rpx;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  font-size: 22rpx;
+  border-radius: 8rpx;
+  z-index: 3;
+}
+
+.label-left {
+  left: 16rpx;
+}
+
+.label-right {
+  right: 16rpx;
+}
+
+.slider-control {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 32rpx 24rpx;
+}
+
+.slider-label {
+  font-size: 22rpx;
+  color: var(--text-hint);
+  flex-shrink: 0;
+}
+
+.slider {
+  flex: 1;
+  margin: 0 16rpx;
+}
+
+.action-card {
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+}
+
+.action-row {
+  margin-bottom: 20rpx;
+}
+
+.action-row:last-child {
+  margin-bottom: 0;
+}
+
+.sub-actions {
+  display: flex;
+  gap: 20rpx;
+}
+
+.action-btn {
+  width: 100%;
+}
+
+.sub-btn {
+  flex: 1;
+}

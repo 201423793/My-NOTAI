@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "loading-overlay": "../../components/loading-overlay/index"
+  },
+  "navigationBarTitleText": "处理中",
+  "disableScroll": true
+}

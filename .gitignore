@@ -1,0 +1,32 @@
+# Android
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/android/app/build
+/android/.gradle
+/android/build
+/android/local.properties
+*.apk
+*.ap_
+*.aab
+*.jks
+*.keystore
+
+# Node
+node_modules/
+miniprogram/node_modules/
+
+# WeChat Mini Program
+miniprogram/miniprogram_npm/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.swp
+*.swo

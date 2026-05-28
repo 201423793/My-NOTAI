@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "image-uploader": "../../components/image-uploader/index",
+    "platform-badge": "../../components/platform-badge/index"
+  },
+  "navigationBarTitleText": "AI去水印"
+}

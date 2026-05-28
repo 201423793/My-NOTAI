@@ -1,0 +1,9 @@
+{
+  "name": "detectWatermark",
+  "version": "1.0.0",
+  "description": "Detect watermark platform and region",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

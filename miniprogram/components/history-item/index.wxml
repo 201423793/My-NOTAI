@@ -1,0 +1,22 @@
+<view class="history-item" bindtap="onView">
+  <image
+    class="item-thumb"
+    src="{{item.resultFileID || item.originalFileID}}"
+    mode="aspectFill"
+  />
+  <view class="item-content">
+    <view class="item-header">
+      <view class="item-platform" wx:if="{{platformInfo}}">
+        <image class="platform-icon" src="{{platformInfo.icon}}" mode="aspectFit" />
+        <text class="platform-name">{{platformInfo.name}}</text>
+      </view>
+      <text class="item-status {{item.status === 'completed' ? 'status-success' : 'status-failed'}}">
+        {{item.status === 'completed' ? '已完成' : '失败'}}
+      </text>
+    </view>
+    <text class="item-date">{{dateText}}</text>
+  </view>
+  <view class="item-delete" catchtap="onDelete">
+    <text class="delete-icon">🗑️</text>
+  </view>
+</view>

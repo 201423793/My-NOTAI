@@ -1,0 +1,5 @@
+<view class="badge" wx:if="{{platformInfo}}">
+  <image class="badge-icon" src="{{platformInfo.icon}}" mode="aspectFit" />
+  <text class="badge-name">{{platformInfo.name}}</text>
+  <text class="badge-confidence" wx:if="{{confidenceText}}">{{confidenceText}}</text>
+</view>

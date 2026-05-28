@@ -1,0 +1,25 @@
+<view class="processing-page">
+  <view class="processing-card">
+    <view class="animation-container">
+      <view class="pulse-ring"></view>
+      <view class="pulse-ring delay"></view>
+      <view class="icon-container">
+        <text class="icon-text">AI</text>
+      </view>
+    </view>
+
+    <text class="status-text">{{statusText}}</text>
+
+    <view class="progress-bar-container">
+      <view class="progress-bar" style="width: {{progress}}%"></view>
+    </view>
+    <text class="progress-text">{{progress}}%</text>
+  </view>
+
+  <view class="tips-section">
+    <text class="tip-text">AI正在智能去除水印，请耐心等待...</text>
+    <text class="tip-sub">通常需要 5-15 秒</text>
+  </view>
+
+  <button class="btn-outline cancel-btn" bindtap="onCancel">取消处理</button>
+</view>

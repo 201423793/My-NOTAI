@@ -1,0 +1,72 @@
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <text class="title">AI 去水印</text>
+    <text class="subtitle">上传AI生成的图片，一键去除水印</text>
+  </view>
+
+  <!-- 上传区域 -->
+  <view class="upload-section">
+    <image-uploader
+      image-path="{{imageFilePath}}"
+      is-uploading="{{isUploading}}"
+      bind:choose="chooseImage"
+      bind:preview="previewImage"
+    />
+  </view>
+
+  <!-- 检测结果 -->
+  <view class="detection-section" wx:if="{{imageFilePath && !isUploading}}">
+    <view class="card">
+      <view class="section-title">水印检测</view>
+      <view class="detection-content" wx:if="{{isDetecting}}">
+        <view class="detecting-spinner"></view>
+        <text class="detecting-text">正在分析图片...</text>
+      </view>
+      <view class="detection-content" wx:elif="{{detectedPlatform}}">
+        <platform-badge platform="{{detectedPlatform}}" confidence="{{platformConfidence}}" />
+        <view class="platform-selector">
+          <text class="selector-label">平台不正确？手动选择：</text>
+          <picker mode="selector" range="{{platforms}}" range-key="name" value="{{selectedPlatform}}" bindchange="onPlatformChange">
+            <view class="picker-value">
+              {{selectedPlatform || '选择平台'}}
+              <text class="picker-arrow">▼</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="detection-content" wx:else>
+        <text class="detection-hint">未能自动识别平台，请手动选择</text>
+        <picker mode="selector" range="{{platforms}}" range-key="name" bindchange="onPlatformChange">
+          <view class="picker-value">
+            {{selectedPlatform || '选择平台'}}
+            <text class="picker-arrow">▼</text>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-section" wx:if="{{imageFilePath && !isUploading}}">
+    <button class="btn-primary" bindtap="removeWatermark" disabled="{{!canProcess || !selectedPlatform}}">
+      去除水印
+    </button>
+    <view class="credits-info">
+      剩余免费次数：{{freeCredits}} 次
+    </view>
+  </view>
+
+  <!-- 平台支持列表 -->
+  <view class="platforms-section" wx:if="{{!imageFilePath}}">
+    <view class="card">
+      <view class="section-title">支持的平台</view>
+      <view class="platform-list">
+        <view class="platform-item" wx:for="{{platforms}}" wx:key="id">
+          <image class="platform-icon" src="{{item.icon}}" mode="aspectFit" />
+          <text class="platform-name">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

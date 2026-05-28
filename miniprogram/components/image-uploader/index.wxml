@@ -1,0 +1,19 @@
+<view class="uploader" bindtap="onTap">
+  <block wx:if="{{imagePath}}">
+    <image class="preview-image" src="{{imagePath}}" mode="aspectFit" />
+    <view class="remove-btn" catchtap="onRemove">✕</view>
+  </block>
+  <block wx:elif="{{isUploading}}">
+    <view class="uploading-state">
+      <view class="upload-spinner"></view>
+      <text class="upload-text">正在处理...</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="placeholder">
+      <text class="placeholder-icon">+</text>
+      <text class="placeholder-text">点击上传图片</text>
+      <text class="placeholder-hint">支持 JPG、PNG 格式</text>
+    </view>
+  </block>
+</view>

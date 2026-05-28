@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "platform-badge": "../../components/platform-badge/index"
+  },
+  "navigationBarTitleText": "处理结果"
+}
