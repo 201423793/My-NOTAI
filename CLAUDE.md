@@ -67,14 +67,6 @@ cloudfunctions/            ← 无服务器云函数（7 个）
 4. **`profile/clearHistory` 效率问题**: 逐条删除，大量记录时性能差
 5. **平台检测逻辑重复**: `utils/platform.js` 和 `detectWatermark/index.js` 各有一份，服务端版本为准
 
-## Android 版本
-
-`android/` 目录下是 Kotlin + Jetpack Compose 原生 Android 应用，使用**本地 OpenCV inpainting** 去水印（无需 API Key，完全离线）。
-
-- 构建：`cd android && ./gradlew assembleRelease`
-- 需要 Android SDK（`local.properties` 中 `sdk.dir`）
-- 核心逻辑：`android/app/src/main/java/com/notai/app/domain/usecase/RemoveWatermarkUseCase.kt`
-
 ## 配置占位符（需替换）
 
 | 文件 | 占位符 | 说明 |
